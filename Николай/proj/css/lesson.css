@@ -1,0 +1,69 @@
+.bar {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    /* зададим высоту баров такую же как и размер шрифта */
+    width: 50px;
+    height: 16px;
+    /* по умолчанию способ позиционирования элементов static
+    в нашем случаем мы меняем на relative
+    для того что бы вложенные элементы можно было сместить left, top, right, bottom */
+    position: relative;
+    /* для отбивки баров укажим отступ в 1 пиксель снизу */
+    margin-bottom: 1px;
+    margin-left: 5px;
+    padding-top: 10px;
+}
+
+
+.value {
+    /* так как иногда ширина поля со значение может быть больше ширины самого бара
+    вынесем значение справа от бара */
+    /* для этого поменяем позиционирование элемента на абсолютное */
+    /* и укажем отступ в 10 пикселей от бара */
+    position: absolute;
+    padding-bottom: 20px;
+
+}
+/* добавим стили для графиков */
+.chart {
+    /* сделаем отбивку между графиками */
+    margin-bottom: 20px;
+    /* теперь фон графика задидим персонально для каждого графика
+    что бы сделать разрывы между граффикам */
+    background-color: grey;
+}
+/* для заголовков находящихся внутри графика уберем все маржины */
+.chart h2 {
+    margin: 0;
+}
+
+
+
+.bar1 {
+  fill: steelblue;
+}
+
+.rect:hover {
+  fill: brown;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+body {
+  font: 10px sans-serif;
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/lesson.css">
+
+	<style>
+		.bar {
+			fill: steelblue;
+		}
+		
+		.bar:hover {
+			fill:brown;
+		}
+		
+		.axis {
+			font: 10px sans-serif;
+		}
+		
+		.axis path,
+		.axis line {
+			fill: none;
+			stroke: #000;
+			shape-rendering: crispEdges;
+		}
+		
+		.x.axis path {
+			display: none;
+		}
+
+		.label {
+			font: 10px sans-serif;
+			transform: rotate(-90);
+		}
+
+	</style>
+</head>
+<body>
+	
+	<div class="content"></div>
+	
+	<script src="js/d3.v3.min.js"></script>
+	<script src="js/main.js"></script>
+	
+</body>
+</html>

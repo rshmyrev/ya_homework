@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+}
+
+/* Название диаграммы */
+p#title {
+  font: 13px Arial;
+  text-transform: uppercase;
+}
+
+/* Подвал */
+p#podval {
+  font: 9px Arial;
+  text-transform: uppercase;
+}
+
+/* Легенда */
+#legend {
+  shape-rendering: crispEdges;
+  height: 25px;
+}
+
+#legend .bar .label {
+  font: 11px Arial;
+}
+
+/* Управление */
+#control {
+  width: 75px;
+  position: relative;
+  top: 18px;
+  left: 465px;
+  z-index: 3;
+}
+
+/* Кнопки */
+button {
+  width: 25px;
+  height: 25px;
+}
+
+button:disabled {
+  fill: gray;
+}
+
+button svg {
+  height: 10px;
+}
+
+
+/* Общие настройки диаграммы */
+#chart {
+  position: relative;
+}
+
+/* Годы */
+.chart.name {
+  font: 12px Arial;
+  font-weight: bold;
+}
+
+
+/* Настройки шкал */
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  fill: none;
+  stroke: none;
+}
+
+/* Шкала X */
+.x.axis line {
+  stroke: #fff;
+  stroke-opacity: 1;
+}
+
+/* Метки на шкале X */
+.x.axis.label {
+  font: 11px Arial;
+}
+
+/* Метки на шкале X */
+.x.axis .tick {
+  font: 11px Arial;
+}
+
+/* Подписи данных */
+.label {
+  font: 12px Arial;
+}
+
+/* Подписи данных */
+#chart .x.axis .label {
+  font: 9px Arial;
+  fill: gray;
+}
+
+
+/* Цвет общих столбиков */
+.bar.common rect {
+  fill: #40A1C7;
+}
+
+/* Цвет текста общих столбиков */
+.bar.common .label{
+}
+
+/* Цвет выбранных общих столбиков */
+.bar.common.choise rect{
+  fill: #0A6E96;
+}
+
+/* Цвет текста выбранных общих столбиков */
+.bar.common.choise .label{
+  fill: #0A6E96;
+  font-weight: bold;
+}
+
+
+/* Цвет новых столбиков */
+.bar.new rect {
+  fill: red;
+}
+
+/* Цвет выбранных новых столбиков */
+.bar.new.choise rect {
+  fill: #C2192E;
+}
+
+/* Цвет текста новых столбиков */
+#chart .bar.new .label {
+  fill: red;
+}
+
+/* Цвет текста выбранных новых столбиков */
+#chart .bar.new.choise .label {
+  fill: #C2192E;
+  font-weight: bold;
+}
+
+/* Цвет текста выбранных новых столбиков в легенде */
+#legend .bar.new.choise .label {
+  font-weight: bold;
+}
+
+
+/* Цвет старых столбиков */
+.bar.old rect,
+.legend.old rect {
+  fill: #94A0A7;
+}
+
+/* Цвет выбранных старых столбиков */
+.bar.old.choise rect,
+.legend.old rect {
+  fill: #4B5D6B;
+}
+
+/* Цвет текста старых столбиков */
+#chart .bar.old .label,
+.legend.old .label {
+  fill: #94A0A7;
+}
+
+/* Цвет текста выбранных старых столбиков */
+#chart .bar.old.choise .label,
+.legend.old .label {
+  fill: #4B5D6B;
+  font-weight: bold;
+}
+
+/* Цвет текста выбранных старых столбиков в легенде */
+#legend .bar.old.choise .label,
+.legend.old .label {
+  font-weight: bold;
+}

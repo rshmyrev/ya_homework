@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>График</title>
+    <script type="text/javascript" src="js/d3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/graph.css"/>
+  </head>
+  <body>
+    <!-- Управление -->
+    <div id="control">
+      <button class="btn btn-mini" id="button1" value='data/tech.tsv'>
+        Технические термины и понятия
+      </button>
+      <button class="btn btn-mini" id="button2" value='data/prog.tsv'>
+        Сервисы и программы
+      </button>
+      <button class="btn btn-mini" id="button3" value='data/slang.tsv'>
+        Сленг
+      </button>
+      <button class="btn btn-mini" id="button4" value='data/other.tsv'>
+        Другое
+      </button>
+    </div>
+
+    <!-- Диаграмма -->
+    <svg id="chart">
+    </svg>
+    <script type="text/javascript" src="js/graph.js"></script>
+    <script>
+      var color = d3.scale.category10();
+      var margin = {top: 75, right: 10, bottom: 30, left: 40};
+      d3.select("#chart")
+          .attr("height", 500 - (90-margin.top))
+      .select("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+
+      var button1 = d3.select("#button1"),
+          button2 = d3.select("#button2"),
+          button3 = d3.select("#button3"),
+          button4 = d3.select("#button4");
+
+      button1.on("click", function() {
+          if (button1.attr("disabled") == null) {
+              load_chart(button1.attr("value"));
+          }
+          button1.attr("disabled", true);
+          button2.attr("disabled", null);
+          button3.attr("disabled", null);
+          button4.attr("disabled", null);
+      });
+
+      button2.on("click", function() {
+          if (button2.attr("disabled") == null) {
+              load_chart(button2.attr("value"));
+          }
+          button1.attr("disabled", null);
+          button2.attr("disabled", true);
+          button3.attr("disabled", null);
+          button4.attr("disabled", null);
+      });
+
+      button3.on("click", function() {
+          if (button3.attr("disabled") == null) {
+              load_chart(button3.attr("value"));
+          }
+          button1.attr("disabled", null);
+          button2.attr("disabled", null);
+          button3.attr("disabled", true);
+          button4.attr("disabled", null);
+      });
+
+      button4.on("click", function() {
+          if (button4.attr("disabled") == null) {
+              load_chart(button4.attr("value"));
+          }
+          button1.attr("disabled", null);
+          button2.attr("disabled", null);
+          button3.attr("disabled", null);
+          button4.attr("disabled", true);
+      });
+
+      load_chart(button1.attr("value"));
+      button1.attr("disabled", true);
+      button2.attr("disabled", null);
+      button3.attr("disabled", null);
+      button4.attr("disabled", null);
+    </script>
+
+    <!-- Подвал -->
+    <p id="podval">
+      По данным поиска Яндекса о запросах российских пользователей, 2010-2014
+    </p>
+  </body>
+</html>

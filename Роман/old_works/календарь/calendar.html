@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>25 слов и понятий, чьи определения искали чаще всего</title>
+    <script type="text/javascript" src="d3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="calendar.css"/>
+  </head>
+  <body>
+    <!-- Заголовок -->
+    <p id="title">
+      <b>25 слов и понятий, объяснение которых искали чаще всего</b>
+    </p>
+
+    <!-- Легенда -->
+    <svg id="legend">
+      <g transform="translate(0,0)" class="bar old">
+        <rect height="11" width="11"></rect>
+        <text dy=".3em" y="5.5" x="15" class="label">Слова, которых нет в топе следующего года</text>
+      </g>
+      <g transform="translate(0,15)" class="bar new">
+        <rect height="11" width="11"></rect>
+        <text dy=".3em" y="5.5" x="15" class="label">Слова, которых не было в топе предыдущего года</text>
+      </g>
+    </svg>
+
+    <!-- Управление -->
+    <div id="control">
+      <button class="btn btn-mini" id="backward">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="30 6 20 11">
+          <path d="M35.6,16l-4-4.4l4-4.4L35,6.6l-4.6,5l4.6,5L35.6,16z"/>
+        </svg>
+      </button>
+      <button class="btn btn-mini" id="forward">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="30 6 20 11">
+          <path d="M30.4,16l4-4.4l-4-4.4L31,6.6l4.6,5l-4.6,5L30.4,16z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Диаграмма -->
+    <svg id="chart">
+    </svg>
+    <script type="text/javascript" src="calendar.js"></script>
+
+    <!-- Подвал -->
+    <p id="podval">
+      По данным поиска Яндекса о запросах российских пользователей, 2010-2014
+    </p>
+  </body>
+</html>
