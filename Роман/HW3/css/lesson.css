@@ -1,0 +1,18 @@
+/* Настройки шкал */
+.axis {
+  shape-rendering: crispEdges;
+}
+.axis path {
+/*   fill: none; */
+  width: 1px;
+  height: 1px;
+}
+
+/* Метки на шкалах */
+.axis .tick {
+  font: 12px Arial;
+}
+
+text:hover {
+  opacity: 1;
+}
