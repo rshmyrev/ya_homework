@@ -2,10 +2,10 @@
 .axis {
   shape-rendering: crispEdges;
 }
-.axis path {
-/*   fill: none; */
-  width: 1px;
-  height: 1px;
+.axis path,
+.axis line {
+  fill: none;
+  stroke: black;
 }
 
 /* Метки на шкалах */
@@ -13,6 +13,12 @@
   font: 12px Arial;
 }
 
-text:hover {
+.bar text {
+  opacity: 0;
+}
+
+.bar:hover text {
   opacity: 1;
+  fill: white;
+  font: 16px Arial;
 }

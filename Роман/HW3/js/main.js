@@ -78,6 +78,7 @@ d3.csv("../data/forestfires.csv", function(error, data) {
     var bar = chart.selectAll("g")
       .data(nest)
     .enter().append("g")
+      .attr("class", "bar")
       .attr("transform", function(d, i) { return "translate(" + x(d.values.X) + "," + y(d.values.Y) + ")"; });
 
     bar.append("rect")
@@ -91,7 +92,6 @@ d3.csv("../data/forestfires.csv", function(error, data) {
       .attr("y", function(d) {return (y(d.values.Y+1) - y(d.values.Y))/2;})
       .attr("text-anchor", "middle")
       .attr("dy", "0.5em")
-      .attr("style", "opacity: 0")
       .text(function(d) {return d.values.count;});
 
     // Добавляем ось X
